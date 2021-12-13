@@ -2,6 +2,7 @@ import os
 import aiohttp
 from Python_ARQ import ARQ
 from os import getenv
+from os import environ
 from dotenv import load_dotenv
 from helpers.uptools import fetch_heroku_git_url
 
@@ -20,6 +21,11 @@ AUD_IMG = getenv("AUD_IMG", "https://telegra.ph/file/f09189fdd97a3764a1f7a.jpg")
 BOT_IMG = getenv("BOT_IMG", "https://telegra.ph/file/fbffad50c0cff6c9001cf.jpg")
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "DK_BOTZ")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "DKBOTZ")
+# make a private channel and get the channel id
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
+AUTH_CHANNEL = int(os.environ.get("AUTH_CHANNEL"))
 BOT_USERNAME = getenv("BOT_USERNAME", "KenzxMusicBot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "kennedyassistant")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "kenbotsupport")
@@ -39,3 +45,15 @@ HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
 
 aiohttpsession = aiohttp.ClientSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
+
+#OWNERS CONFIG
+
+OWNER_ID = int(os.environ.get("OWNER_ID"))
+ADMINS = int(os.environ.get("OWNER_ID"))
+#MONGA DB URL
+BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
+DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URI = environ.get('DATABASE_URL', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Watermarks")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+
