@@ -13,8 +13,8 @@ from config import (
 from radio.song import get_text, humanbytes
 from radio.database import db
 from radio.dbtools import main_broadcast_handler
-from radio.decorators import sudo_users_only
-from radio.filters import command
+from helpers.decorators import sudo_users_only
+from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message
         
