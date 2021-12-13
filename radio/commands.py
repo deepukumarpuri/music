@@ -12,8 +12,8 @@ from config import ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, OWNER_NAME
 from utils import get_size, is_subscribed, temp
 import re
 from radio import __version__
-from radio.decorators import sudo_users_only
-from radio.filters import command
+from helpers.decorators import sudo_users_only
+from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
