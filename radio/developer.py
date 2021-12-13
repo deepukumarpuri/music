@@ -10,8 +10,8 @@ from pyrogram import Client, filters
 from inspect import getfullargspec
 from sys import version as pyver
 from config import BOT_USERNAME
-from radio.decorators import sudo_users_only
-from radio.filters import command
+from helpers.decorators import sudo_users_only
+from helpers.filters import command
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
